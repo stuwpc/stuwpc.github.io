@@ -1,0 +1,110 @@
+.mytable{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+caption{
+    width: 1300px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 35px;
+    border-bottom: 2px solid #848484;
+}
+
+table tr:nth-child(2n){
+    background-color: antiquewhite;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+thead tr {
+    width: 1300px;
+    height: 40PX;
+    text-align: center;
+    color: #fff;
+    background-color: #848484;
+}
+
+td{
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+}
+
+tbody tr td{
+    width: 1300px;
+    height: 38PX;
+    text-align: center;
+    line-height: 38px;
+}
+
+.colu-1{
+    width: 5%;
+}
+
+.foot_index{
+    width: 1300px;
+    height: 100PX;
+    /* background-color: aqua; */
+    line-height: 100px;
+    text-align: center;
+}
+.foot_index li{
+    margin: 0 0;
+}
+
+.foot_index li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+}
+.foot_index li a:hover{
+    background-color: #848484;
+}
+
+.operation{
+    position: fixed;
+    width: 60px;
+    height: 300px;
+    background-color: #D8D8D8;
+    bottom: 130px;
+    border-radius: 0 2px 2px 0;
+}
+
+.operation a{
+    width: 60px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    border: 1px solid #fff;
+}
+
+.operation a:hover{
+    background-color: #848484;
+}
+
+.btn{
+    border: 1px solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000;
+    /* border: 2px solid #000; */
+    border: 0px;
+}
+
+.btn a{
+    color: #fff;
+}
+.btn:nth-child(1){
+    background-color: green;
+}
+
+.btn:nth-child(2){
+    background-color: red;
+}

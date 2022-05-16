@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/forms.css" type="text/css">    
+    <title>Login</title>
+</head>
+<body>
+	<div class="bg">
+		<!-- 登录注册模块 -->
+		<div class="container">
+			<div class="formbox">
+				<div class="formhead">
+					<ul>
+						<li><a id = "dl" href="#">登录</a></li>
+						<li><a id = "zc" href="#">注册</a></li>
+					</ul>
+				</div>
+				<div class="login">
+					<form method="post",action="login/">
+						<div class="ldiv">
+							<input type="text" placeholder="请输入用户名或邮箱"/>
+						</div>
+						<div class="ldiv">
+							<input type="password" placeholder="请输入密码"/>
+						</div>
+						<div class="pldiv">
+							<input type="checkbox">记住密码
+						</div>
+						<div class="ldiv">
+							<button type="submit">登录</button>
+						</div>
+					</form>
+				</div>
+				<div class="register">
+					<form method="post",action="register/">
+						<div class="rldiv">
+							<input type="text" placeholder="请输入用户名"/>
+						</div>
+						<div class="rldiv">
+							<input type="text" placeholder="请输入邮箱"/>
+						</div>
+						<div class="rldiv">
+							<input type="text" placeholder="请输入电话"/>
+						</div>
+						<div class="rldiv">
+							<input type="password" placeholder="请输入密码"/>
+						</div>
+						<div class="rldiv">
+							<input type="text" placeholder="请输入性别（男或女）"/>
+						</div>
+						<div class="rldiv">
+							<input type="text" placeholder="请输入家庭住址"/>
+						</div>
+						<div class="rldiv">
+							<button type="submit">注册</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script>
+			// 获取元素
+			var dl = document.getElementById('dl');
+			var zc = document.getElementById('zc');
+			var login = document.getElementsByClassName('login');
+			var register = document.getElementsByClassName('register');
+			var formbox = document.getElementsByClassName('formbox');
+			console.log(dl);
+			console.log(zc);
+			console.log(login[0]);
+			console.log(register[0]);
+			//注册事件
+			dl.onmouseover = function(){
+				dl.style.color = 'blue';
+				dl.style.borderBottom = "2px solid blue";
+			}
+			zc.onmouseover = function(){
+				zc.style.color = 'blue';
+				zc.style.borderBottom = "2px solid blue";
+			}
+			dl.onmouseout = function(){
+				dl.style.color = '#fff';
+				dl.style.borderBottom = "0PX";
+			}
+			zc.onmouseout = function(){
+				zc.style.color = '#fff';
+				zc.style.borderBottom = "0PX";
+			}
+			dl.onclick = function(){
+				formbox[0].style.height = 300+"px";
+				login[0].style.display = "block";
+				register[0].style.display = "none";
+			}
+			zc.onclick = function(){
+				formbox[0].style.height = 600+"px";
+				login[0].style.display = "none";
+				register[0].style.display = "block";  
+			}
+		</script>
+	</div>
+</body>
+</html>
+
+
+<!-- 
+<html>
+  <head>
+    <title>登录</title>
+	<meta name="decorator" content="default"/>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></scrip>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		*{
+			margin: 0 auto;
+		}
+		body{
+			background-color: #343a40;
+		}
+		.container{
+			position: relative;
+			top: 100px;
+		}
+		.news-nav{
+			clear: both;
+			height: 80px;
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 300px;
+			margin: 0 auto;
+		}
+		.news-nav li{
+			float: left;
+			list-style-type: none;
+			margin: 0 10px;
+			font-size: 30px;
+			display: block;
+			width: 86px;
+			height: 79px;
+			text-align: center;
+			line-height: 79px;
+			font-weight: bold;
+			color: #007bff;
+			cursor: pointer;
+		}
+		.news-nav li.on{
+			color: #74dcff;
+			border-bottom-color: #74dcff;
+			border-bottom-style: solid;
+			border-bottom-width: 2px;
+		}
+		#index-news-list-2{
+			display: none;
+		}
+		.modal-dialog{
+			max-width: 100% !important;
+		}
+		.modal-content{
+			background:rgba(0,0,0,0.3);
+			width: 700px;
+		}
+		.loginForm{
+			width: 400px;
+		}
+		.loginForm .form-group{
+			margin: 30px 0;
+		}
+		.loginForm .form-group .form-control{
+			height: 40px;
+			font-size: 15px;
+		}
+		input[type="checkbox"]{
+			position:relative;
+			top:-2px;
+			vertical-align: middle;
+			cursor: pointer;
+			zoom:1.6;
+		}
+		input[type="radio"]{
+			position:relative;
+			top:-3px;
+			vertical-align: middle;
+			cursor: pointer;
+			zoom:1.6;
+		}
+		.btn-primary{
+			background-color: #3e4963; 
+			border: 0px solid transparent;
+			width: 400px;
+			height: 50px;
+			font-size: 24px;
+			font-family: STKaiti;
+		}
+		label{
+			color: #fff;
+			font-size: 16px;
+		}
+	</style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="modal-dialog" id="login_form">
+			<div class="modal-content">
+				
+				<div class="modal-body index-news-list" id="index-news-list-1">
+					<form class="loginForm" id="loginForm" action="" method="post">
+						  <div class="form-group">
+							  <input class="form-control required" name="name" id="name" type="text" placeholder="请输入用户名或邮箱">
+						  </div>
+						  <div class="form-group">
+							  <input class="form-control required" name="password" id="password" type="password" placeholder="请输入密码">
+						  </div>
+						  <div class="form-group">
+							  <label for="remember">
+								<input type="checkbox" name="remember" id="remember" value="0"/> 记住我
+							  </label>
+						  </div>
+						  <div class="form-group">
+							  <button class="btn btn-primary" type="submit">登录</button>
+						  </div>
+					 </form>
+				</div>
+				
+				<div class="modal-body index-news-list" id="index-news-list-2">
+					<form class="loginForm" id="registerForm" action="" method="post">
+						  <div class="form-group">
+							  <input class="form-control required" name="name" id="name" type="text" placeholder="请输入要注册的用户名或邮箱">
+						  </div>
+						  <div class="form-group">
+							  <input class="form-control required" name="password" id="rePassword" type="password" placeholder="请输入密码">
+						  </div>
+						  <div class="form-group">
+							  <input class="form-control required" name="rePassword" id="rePassword1" type="password" placeholder="请再次输入密码">
+						  </div>
+						   <div class="form-group">
+							  <label style="margin-right: 20px;">性别</label>
+							  <input id="nan" name="sex" type="radio" value="0">
+							  <label for="nan" style="margin-right: 20px;">男</label>
+							  <input id="nv" name="sex" type="radio" value="1">
+							  <label for="nv">女</label>
+							  <label for="remember" style="margin-left: 164px;">
+								<input type="checkbox" name="remember" id="remember" value="0"/> 记住我
+							  </label>
+						  </div>
+						  <div class="form-group">
+							  <button class="btn btn-primary" type="submit">注册</button>
+						  </div>
+					 </form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$(".js-nav-title li").click(function(){
+				$(this).attr("class","on");
+				$(this).siblings().attr("class","");
+				var index = $(".js-nav-title li").index(this);
+				$(".index-news-list").css("display","none");
+				$("#index-news-list-"+(index+1)).css("display","block");
+			});
+ -->
